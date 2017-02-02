@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "recursos-humanos-2-orbis-ontime",
   "version": "0.0.0",
-  "description": "Modular starter project for Angular 2 (and beyond) with statically typed build and AoT compilation",
+  "description": "recursos-humanos-2-orbis-ontime",
   "repository": {
-    "url": "https://github.com/mgechev/angular-seed"
+    "url": "https://bitbucket.org/orbisontime/frontend"
   },
   "scripts": {
     "build.dev": "gulp build.dev --color --env-config dev",
@@ -43,7 +43,7 @@
     "compodoc": "node_modules/.bin/compodoc -p src/client/tsconfig.json",
     "serve.compodoc": "node_modules/.bin/compodoc -s"
   },
-  "author": "Minko Gechev <mgechev>",
+  "author": "Orbis OnTime",
   "license": "MIT",
   "devDependencies": {
     "@angular/compiler-cli": "~2.4.0",
