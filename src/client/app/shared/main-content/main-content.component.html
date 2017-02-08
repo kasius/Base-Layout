@@ -1,0 +1,11 @@
+<section [ngClass]="(sizeSection==true)?'section-xs':'section-lg'">
+    <div class="container-primary">
+        <router-outlet>
+
+        </router-outlet>
+    </div>
+    <div [ngClass]="(overlay==true)?'overlay':''">
+    </div>
+</section>
+<footer>
+</footer>

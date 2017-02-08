@@ -1,0 +1,129 @@
+<span class="span-h1">Liquidar</span>
+<div class="breack-nav">
+    <ul>
+        <li>Liquidaciones ></li>
+        <li class="ubication">Liquidar </li>
+    </ul>
+</div>
+<br>
+<hr>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="box grilla">
+                    <div class="form-group">
+                        <input value="" [(ngModel)]="filterTextEmployee" type="text" />
+                        <label class="control-label" for="input">Rut, Nombre, Apellido...</label><i class="bar"></i>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <div class="box grilla">
+                    <div class="form-group">
+                        <button class="btn-primary btn-md btn-block">
+                    <span>Buscar</span>
+                    </button>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="box grilla">
+                    <div class="form-group">
+                        <select [(ngModel)]="filterEmployeeGrp">
+                    <option [ngValue]=1>Todos los Empleados</option>
+                    <option [ngValue]=2>Desarrolladores</option>
+                    <option [ngValue]=3>Otros</option>
+                </select>
+                        <label class="control-label" for="select">Grupos</label><i class="bar"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="box grilla">
+                    <div class="form-group">
+                        <select [(ngModel)]="filterEmployeeStt">
+                    <option [ngValue]="Activo">Activos</option>
+                    <option [ngValue]="Inactivo">Inactivos</option>
+                </select>
+                        <label class="control-label" for="select">Estado</label><i class="bar"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="box grilla">
+                    <div class="form-group">
+                        <select>
+                    <option>Habitad</option>
+                    <option>Provida</option>
+                    <option>Cuprum</option>
+                    <option>Modelo</option>
+                </select>
+                        <label class="control-label" for="select">AFP</label><i class="bar"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="box grilla">
+                    <span class="txt-grilla">99 Liquidados de 120 empleados </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="box grilla">
+                    <span class="txt-grilla">23/02/2017 fue la ultima vez que se liquido personal </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<span class="span-h2">Detalle</span>
+<hr>
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Rut</th>
+            <th>Nombre/Apellido</th>
+            <th>Cargo</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees | group:filterEmployeeGrp | text:filterTextEmployee">
+            <td>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" [(ngModel)]="employee.selected" required/><i class="helper"></i> &nbsp;
+                    </label>
+                </div>
+            </td>
+            <td>{{employee.rut}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.cargo}}</td>
+            <td  class="center">
+                <label [ngClass]="['label',(employee.state=='Activo')?'label-primary':'label-warning']">
+                    {{employee.state}}    
+                </label>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="col-xs-12 col-sm-12 col-md-offset-6 col-lg-offset-6 col-md-6 col-lg-6">
+    <div class="button-container">
+        <button class="button btn-1" type="button" (click)="liquidateSelected();"><span>Calcular Liquidaciones</span></button>
+        <!--<button class="btn-primary btn-lg" (click)="liquidateSelected();">Calcular Liquidaciones</button>-->
+    </div>
+    <div class="button-container">
+        <button class="button btn-3" type="button" (click)="reLiquidateSelected();"><span>Volver a Calcular</span></button>
+    </div>
+</div>

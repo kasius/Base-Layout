@@ -141,7 +141,7 @@ export class SeedConfig {
    * `index.html`.
    * @type {string}
    */
-  APP_TITLE = 'Welcome to angular-seed!';
+  APP_TITLE = 'RRHH - Orbis OnTime';
 
   /**
    * The base folder of the applications source files.
@@ -365,6 +365,7 @@ export class SeedConfig {
       '@angular/platform-browser': 'node_modules/@angular/platform-browser/bundles/platform-browser.umd.js',
       '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
       '@angular/router': 'node_modules/@angular/router/bundles/router.umd.js',
+      'toastr-ng2': 'node_modules/toastr-ng2/toastr.umd.js',
 
       '@angular/common/testing': 'node_modules/@angular/common/bundles/common-testing.umd.js',
       '@angular/compiler/testing': 'node_modules/@angular/compiler/bundles/compiler-testing.umd.js',

@@ -1,0 +1,148 @@
+<aside [ngClass]="(sizeMenu==true)?'aside-xs':'aside-lg'">
+    <div class="aside-h1">
+        <span>Menu</span>
+    </div>
+    <div class="aside-h2" style="display:none;">
+<div>
+    <i class="material-icons list-icon">list</i>
+    <span class="sub-menu">MENU DESPLEGABLE</span>
+</div>
+<div class="div-input-search">
+    <input type="text" name="" value="" placeholder="Search...">
+</div>
+</div>
+<div class="content-menu">
+    <ul (mouseover)="hoveritem('mouseleave',true);" (mouseout)="hoveritem('mouseout',false)" class="menu-primary">
+        <li class="item-0">
+            <a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+                <div>
+                    <i class="material-icons list-icon">dashboard</i>
+                    <div class="div-primary">
+                        <span>Dashboard</span>
+                        <i [ngClass]="['material-icons', 'icon-menu', 'rotate-icon']">expand_more</i>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="item-1">
+            <a>
+                <div class="active-menu">
+                    <!--<i class="material-icons list-icon">directions_walk</i>-->
+                    <i class="material-icons list-icon">account_balance</i>
+                    <div class="div-primary">
+                        <span>Liquidaciones</span>
+                        <!--(click)="inItemMenu(0);"-->
+                        <i (click)="showHideSubMenu();" [ngClass]="['material-icons', 'icon-menu', 'rotate-icon']">expand_more</i>
+                        <ul [ngClass]="[(sizeMenu==true)?'block, menu-xs':'menu-lg', 'sub-menu-list']">
+                            <li>
+                                <a [routerLink]="['/liquidate']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+                                    <span>Liquidar</span>
+                                    <i class="material-icons icon-menu">chevron_right</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/liquidations']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+                                    <span>Liquidaciones</span>
+                                    <i class="material-icons icon-menu">chevron_right</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/quadrature']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">
+                                    <span>Cuadratura</span>
+                                    <i class="material-icons icon-menu">chevron_right</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <!--<li class="item-2">
+            <a>
+                <div>
+                    <i class="material-icons list-icon">assignment_turned_in</i>
+                    <div class="div-primary">
+                        <span>Haberes y Descuentos</span>
+                        <i [ngClass]="['material-icons', 'icon-menu', 'rotate-icon']">expand_more</i>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="item-3">
+            <a>
+                <div>
+                    <i class="material-icons list-icon">payment</i>
+                    <div class="div-primary">
+                        <span>Ausencias</span>
+                        <i [ngClass]="['material-icons', 'icon-menu', 'rotate-icon']">expand_more</i>
+                        <ul [ngClass]="[(sizeMenu==true)?'block, menu-xs':'menu-lg', 'sub-menu-list']">
+                            <li>
+                                <a>
+                                    <span>Sub-Menu</span>
+                                    <i class="material-icons icon-menu">chevron_right</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Sub-Menu</span>
+                                    <i class="material-icons icon-menu">chevron_right</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span>Sub-Menu</span>
+                                    <i class="material-icons icon-menu">chevron_right</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="item-4">
+            <a>
+                <div>
+                    <i class="material-icons list-icon">library_books</i>
+                    <div class="div-primary">
+                        <span>Personas y Empleados</span>
+                        <i [ngClass]="['material-icons', 'icon-menu', 'rotate-icon']">expand_more</i>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="item-5">
+            <a>
+                <div>
+                    <i class="material-icons list-icon">bug_report</i>
+                    <div class="div-primary">
+                        <span>Reportes</span>
+                        <i [ngClass]="['material-icons', 'icon-menu', 'rotate-icon']">expand_more</i>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="item-6">
+            <a>
+                <div>
+                    <i class="material-icons list-icon">autorenew</i>
+                    <div class="div-primary">
+                        <span>Cierre Mes</span>
+                        <i [ngClass]="['material-icons', 'icon-menu', 'rotate-icon']">expand_more</i>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="item-7">
+            <a>
+                <div>
+                    <i class="material-icons list-icon">build</i>
+                    <div class="div-primary">
+                        <span>Parametros</span>
+                        <i [ngClass]="['material-icons', 'icon-menu', 'rotate-icon']">expand_more</i>
+                    </div>
+                </div>
+            </a>
+        </li>-->
+    </ul>
+</div>
+</aside>

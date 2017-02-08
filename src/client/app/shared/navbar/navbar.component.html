@@ -1,4 +1,29 @@
 <nav>
-  <a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">HOME</a>
-  <a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">ABOUT</a>
+  <i (click)="toggleMenu();" class="material-icons btn-menu">list</i>
+    <ul class="nav">
+        <li>
+            <i class="material-icons icon-nav">done_all</i>
+            <span>Acceso Rápido 1</span>
+        </li>
+        <li>
+            <i class="material-icons icon-nav">announcement</i>
+            <span>Acceso Rápido 2</span>
+        </li>
+        <li>
+            <i class="material-icons icon-nav">fingerprint</i>
+            <span>Acceso Rápido 3</span>
+        </li>
+        <li>
+            <i class="material-icons icon-nav">record_voice_over</i>
+            <span>Acceso Rápido 4</span>
+        </li>
+        <li>
+            <i class="material-icons icon-nav">touch_app</i>
+            <span>Acceso Rápido 5</span>
+        </li>
+        <li>
+            <i class="material-icons icon-nav">recent_actors</i>
+            <span>Acceso Rápido 6</span>
+        </li>
+    </ul>
 </nav>
